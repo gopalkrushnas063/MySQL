@@ -1,0 +1,22 @@
+CREATE TABLE Employee(
+	EmpNo INT PRIMARY KEY,
+	Ename VARCHAR(20) NOT NULL,
+	Job VARCHAR(20) NOT NULL,
+	Sal INT NOT NULL,
+	Hiredate DATE NOT NULL,
+	Deptno INT,
+	FOREIGN KEY (Deptno) REFERENCES Department(Deptno)
+);
+
+mysql> DESC Employee;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| EmpNo    | int         | NO   | PRI | NULL    |       |
+| Ename    | varchar(20) | NO   |     | NULL    |       |
+| Job      | varchar(20) | NO   |     | NULL    |       |
+| Sal      | int         | NO   |     | NULL    |       |
+| Hiredate | date        | NO   |     | NULL    |       |
+| Deptno   | int         | YES  | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)

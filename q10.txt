@@ -1,0 +1,15 @@
+CREATE TABLE Grade(
+	GradeNo INT PRIMARY KEY,
+	Hi_sal INT NOT NULL,
+	Lo_sal INT NOT NULL
+);
+
+mysql> DESC Grade;
++---------+------+------+-----+---------+-------+
+| Field   | Type | Null | Key | Default | Extra |
++---------+------+------+-----+---------+-------+
+| GradeNo | int  | NO   | PRI | NULL    |       |
+| Hi_sal  | int  | NO   |     | NULL    |       |
+| Lo_sal  | int  | NO   |     | NULL    |       |
++---------+------+------+-----+---------+-------+
+3 rows in set (0.00 sec)

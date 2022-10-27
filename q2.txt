@@ -1,0 +1,22 @@
+INSERT INTO PROGRAMMER(EmpNo,LastName,FirstName,Hiredate,ProjId,Language,TaskNo,Privilege) VALUES
+(201,'Gupta','Saurav','1995-01-01','NPR','VB',52,'Secret'),
+(390,'Ghosh','Pinky','1993-01-05','KCW','JAVA',11,'TopSecret'),
+(789,'Agarwal','Praveen','1998-08-03','RNC','VB',11,'Secret'),
+(134,'Chaudhury','Supriyo','1995-07-15','TIPPS','C++',52,'Secret'),
+(896,'Jha','Ranjit','1997-06-15','KCW','JAVA',10,'TopSecret'),
+(345,'John','Peter','1999-11-15','TIPPS','JAVA',52,NULL),
+(563,'Anderson','Andy','1994-08-15','NITTS','C++',89,'Confidential');
+
+mysql> SELECT * FROM PROGRAMMER;
++-------+--------+-----------+-----------+------------+----------+--------+--------------+
+| EmpNo | ProjId | LastName  | FirstName | HireDate   | Language | TaskNo | Privilege    |
++-------+--------+-----------+-----------+------------+----------+--------+--------------+
+|   134 | TIPPS  | Chaudhury | Supriyo   | 1995-07-15 | C++      |     52 | Secret       |
+|   201 | NPR    | Gupta     | Saurav    | 1995-01-01 | VB       |     52 | Secret       |
+|   345 | TIPPS  | John      | Peter     | 1999-11-15 | JAVA     |     52 | NULL         |
+|   390 | KCW    | Ghosh     | Pinky     | 1993-01-05 | JAVA     |     11 | TopSecret    |
+|   563 | NITTS  | Anderson  | Andy      | 1994-08-15 | C++      |     89 | Confidential |
+|   789 | RNC    | Agarwal   | Praveen   | 1998-08-03 | VB       |     11 | Secret       |
+|   896 | KCW    | Jha       | Ranjit    | 1997-06-15 | JAVA     |     10 | TopSecret    |
++-------+--------+-----------+-----------+------------+----------+--------+--------------+
+7 rows in set (0.00 sec)

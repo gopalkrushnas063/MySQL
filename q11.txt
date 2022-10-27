@@ -1,0 +1,13 @@
+mysql> ALTER TABLE Grade DROP COLUMN Lo_sal;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+mysql> DESC Grade;
++---------+------+------+-----+---------+-------+
+| Field   | Type | Null | Key | Default | Extra |
++---------+------+------+-----+---------+-------+
+| GradeNo | int  | NO   | PRI | NULL    |       |
+| Hi_sal  | int  | NO   |     | NULL    |       |
++---------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)

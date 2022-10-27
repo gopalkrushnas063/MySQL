@@ -1,0 +1,26 @@
+
+INSERT INTO Department(DeptNo,Dname,LOC) VALUES
+(10,'ACCOUNTS','NEWYORK'),
+(20,'MARKETING','CHICAGO'),
+(30,'SALES','ATLANTA'),
+(40,'RESEARCH','OHIO');
+
+
+mysql> INSERT INTO Department(DeptNo,Dname,LOC) VALUES
+    -> (10,'ACCOUNTS','NEWYORK'),
+    -> (20,'MARKETING','CHICAGO'),
+    -> (30,'SALES','ATLANTA'),
+    -> (40,'RESEARCH','OHIO');
+Query OK, 4 rows affected (0.05 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Department;
++--------+-----------+---------+
+| DeptNo | Dname     | Loc     |
++--------+-----------+---------+
+|     10 | ACCOUNTS  | NEWYORK |
+|     20 | MARKETING | CHICAGO |
+|     30 | SALES     | ATLANTA |
+|     40 | RESEARCH  | OHIO    |
++--------+-----------+---------+
+4 rows in set (0.00 sec)

@@ -1,0 +1,19 @@
+INSERT INTO Employee(EMPNO,ENAME,JOB,SAL,HIREDATE,DEPTNO) VALUES
+(7001 , 'JAMES' ,'CLERK' ,3000 ,'2005-05-06' ,10),
+(7002, 'MASON', 'PRESIDENT' ,10000 ,'2005-06-06' ,20),
+(7003 ,'CLARK','MANAGER' ,5000, '2004-05-06', 20),
+(7004 ,'JOHN' ,'MANAGER' ,6000 ,'2005-08-06', 10),
+(7005 ,'BLAKE', 'CLERK', 3500 , '2005-09-06', 30);
+
+
+mysql> SELECT * FROM Employee;
++-------+-------+-----------+-------+------------+--------+
+| EmpNo | Ename | Job       | Sal   | Hiredate   | Deptno |
++-------+-------+-----------+-------+------------+--------+
+|  7001 | JAMES | CLERK     |  3000 | 2005-05-06 |     10 |
+|  7002 | MASON | PRESIDENT | 10000 | 2005-06-06 |     20 |
+|  7003 | CLARK | MANAGER   |  5000 | 2004-05-06 |     20 |
+|  7004 | JOHN  | MANAGER   |  6000 | 2005-08-06 |     10 |
+|  7005 | BLAKE | CLERK     |  3500 | 2005-09-06 |     30 |
++-------+-------+-----------+-------+------------+--------+
+5 rows in set (0.00 sec)

@@ -1,0 +1,17 @@
+SELECT 
+EmpNo,CONCAT(UPPER(SUBSTRING(Ename,1,1)),LOWER(SUBSTRING(Ename,2))) Ename
+,Job,Sal,HireDate,DeptNo,MGR,COMM
+FROM Employee;
+
+mysql> SELECT
+    -> EmpNo,CONCAT(UPPER(SUBSTRING(Ename,1,1)),LOWER(SUBSTRING(Ename,2))) Ename
+    -> ,Job,Sal,HireDate,DeptNo,MGR,COMM
+    -> FROM Employee;
++-------+-------+-----------+-------+------------+--------+------+------+
+| EmpNo | Ename | Job       | Sal   | HireDate   | DeptNo | MGR  | COMM |
++-------+-------+-----------+-------+------------+--------+------+------+
+|  7002 | Mason | PRESIDENT | 10000 | 2005-06-06 |     20 | NULL |    0 |
+|  7004 | John  | MANAGER   |  6600 | 2005-08-06 |     10 | NULL |  500 |
+|  7005 | Blake | CLERK     |  3500 | 2005-09-06 |     30 | NULL |    0 |
++-------+-------+-----------+-------+------------+--------+------+------+
+3 rows in set (0.00 sec)

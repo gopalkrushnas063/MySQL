@@ -1,0 +1,14 @@
+ALTER TABLE Department MODIFY Dname  VARCHAR(50);
+mysql> ALTER TABLE Department MODIFY Dname  VARCHAR(50);
+Query OK, 0 rows affected (0.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC Department;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DeptNo | int         | NO   | PRI | NULL    |       |
+| Dname  | varchar(50) | YES  | UNI | NULL    |       |
+| Loc    | varchar(20) | NO   | UNI | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)

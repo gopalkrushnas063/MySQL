@@ -1,0 +1,7 @@
+mysql> SELECT Sal,COMM, SUM(Sal+Comm) Bonus FROM Employee;
++-------+------+-------+
+| Sal   | COMM | Bonus |
++-------+------+-------+
+| 10000 |    0 | 20000 |
++-------+------+-------+
+1 row in set (0.00 sec)

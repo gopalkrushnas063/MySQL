@@ -1,0 +1,24 @@
+INSERT INTO Grade(GRADENO,HI_SAL,LOW_SAL) VALUES
+(1,200,500),
+(2,3500,2100),
+(3,6000,3600),
+(4,15000,6100);
+
+mysql> INSERT INTO Grade(GRADENO,HI_SAL,LOW_SAL) VALUES
+    -> (1,200,500),
+    -> (2,3500,2100),
+    -> (3,6000,3600),
+    -> (4,15000,6100);
+Query OK, 4 rows affected (0.03 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Grade;
++---------+--------+---------+
+| GradeNo | Hi_sal | Low_sal |
++---------+--------+---------+
+|       1 |    200 |     500 |
+|       2 |   3500 |    2100 |
+|       3 |   6000 |    3600 |
+|       4 |  15000 |    6100 |
++---------+--------+---------+
+4 rows in set (0.00 sec)

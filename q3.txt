@@ -1,0 +1,67 @@
+
+
+------------------------------------------------------------------------------------------------------------------
+a. Saurav Gupta is assigned a different project with id NITTS and he would work with C++ now. Update
+this change in the PROGRAMMER table.
+------------------------------------------------------------------------------------------------------------------
+
+mysql> UPDATE PROGRAMMER SET ProjID = 'NITTS',Language = 'C++' WHERE FirstName = 'Saurav' AND LastName = 'Gupta';
+Query OK, 1 row affected (0.06 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM Programmer;
++-------+--------+-----------+-----------+------------+----------+--------+--------------+
+| EmpNo | ProjId | LastName  | FirstName | HireDate   | Language | TaskNo | Privilege    |
++-------+--------+-----------+-----------+------------+----------+--------+--------------+
+|   134 | TIPPS  | Chaudhury | Supriyo   | 1995-07-15 | C++      |     52 | Secret       |
+|   201 | NITTS  | Gupta     | Saurav    | 1995-01-01 | C++      |     52 | Secret       |
+|   345 | TIPPS  | John      | Peter     | 1999-11-15 | JAVA     |     52 | NULL         |
+|   390 | KCW    | Ghosh     | Pinky     | 1993-01-05 | JAVA     |     11 | TopSecret    |
+|   563 | NITTS  | Anderson  | Andy      | 1994-08-15 | C++      |     89 | Confidential |
+|   789 | RNC    | Agarwal   | Praveen   | 1998-08-03 | VB       |     11 | Secret       |
+|   896 | KCW    | Jha       | Ranjit    | 1997-06-15 | JAVA     |     10 | TopSecret    |
++-------+--------+-----------+-----------+------------+----------+--------+--------------+
+7 rows in set (0.00 sec)
+
+------------------------------------------------------------------------------------------------------------------
+b. Supriyo Chaudhury has resigned his job. Incorporate this in the table PROGRAMMER.
+------------------------------------------------------------------------------------------------------------------
+
+mysql> DELETE FROM Programmer WHERE FirstName = 'Supriyo' AND LastName = 'Chaudhury';
+Query OK, 1 row affected (0.04 sec)
+
+mysql> SELECT * FROM Programmer;
++-------+--------+----------+-----------+------------+----------+--------+--------------+
+| EmpNo | ProjId | LastName | FirstName | HireDate   | Language | TaskNo | Privilege    |
++-------+--------+----------+-----------+------------+----------+--------+--------------+
+|   201 | NITTS  | Gupta    | Saurav    | 1995-01-01 | C++      |     52 | Secret       |
+|   345 | TIPPS  | John     | Peter     | 1999-11-15 | JAVA     |     52 | NULL         |
+|   390 | KCW    | Ghosh    | Pinky     | 1993-01-05 | JAVA     |     11 | TopSecret    |
+|   563 | NITTS  | Anderson | Andy      | 1994-08-15 | C++      |     89 | Confidential |
+|   789 | RNC    | Agarwal  | Praveen   | 1998-08-03 | VB       |     11 | Secret       |
+|   896 | KCW    | Jha      | Ranjit    | 1997-06-15 | JAVA     |     10 | TopSecret    |
++-------+--------+----------+-----------+------------+----------+--------+--------------+
+6 rows in set (0.00 sec)
+
+
+------------------------------------------------------------------------------------------------------------------
+c. The column TaskNo in the PROGRAMMER table is no longer needed. Delete the column.
+------------------------------------------------------------------------------------------------------------------
+mysql> ALTER TABLE Programmer DROP COLUMN TaskNo;
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Programmer;
++-------+--------+----------+-----------+------------+----------+--------------+
+| EmpNo | ProjId | LastName | FirstName | HireDate   | Language | Privilege    |
++-------+--------+----------+-----------+------------+----------+--------------+
+|   201 | NITTS  | Gupta    | Saurav    | 1995-01-01 | C++      | Secret       |
+|   345 | TIPPS  | John     | Peter     | 1999-11-15 | JAVA     | NULL         |
+|   390 | KCW    | Ghosh    | Pinky     | 1993-01-05 | JAVA     | TopSecret    |
+|   563 | NITTS  | Anderson | Andy      | 1994-08-15 | C++      | Confidential |
+|   789 | RNC    | Agarwal  | Praveen   | 1998-08-03 | VB       | Secret       |
+|   896 | KCW    | Jha      | Ranjit    | 1997-06-15 | JAVA     | TopSecret    |
++-------+--------+----------+-----------+------------+----------+--------------+
+6 rows in set (0.00 sec)
+
+

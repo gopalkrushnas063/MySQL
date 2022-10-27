@@ -1,0 +1,26 @@
+mysql> CREATE TABLE PROGRAMMER(
+    -> EmpNo INT(5) PRIMARY KEY,
+    -> ProjId INT(3),
+    -> LastName VARCHAR(30),
+    -> FirstName VARCHAR(30),
+    -> HireDate DATE,
+    -> Language VARCHAR(15),
+    -> TaskNo INT(2),
+    -> Privilege VARCHAR(25)
+    -> );
+Query OK, 0 rows affected, 3 warnings (0.12 sec)
+
+mysql> DESC PROGRAMMER;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EmpNo     | int         | NO   | PRI | NULL    |       |
+| ProjId    | int         | YES  |     | NULL    |       |
+| LastName  | varchar(30) | YES  |     | NULL    |       |
+| FirstName | varchar(30) | YES  |     | NULL    |       |
+| HireDate  | date        | YES  |     | NULL    |       |
+| Language  | varchar(15) | YES  |     | NULL    |       |
+| TaskNo    | int         | YES  |     | NULL    |       |
+| Privilege | varchar(25) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+8 rows in set (0.02 sec)

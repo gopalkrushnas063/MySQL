@@ -1,0 +1,22 @@
+CREATE TABLE Department(
+	DeptNo INT PRIMARY KEY UNIQUE,
+	Dname VARCHAR(12) NOT NULL UNIQUE,
+	Loc VARCHAR(20) NOT NULL UNIQUE
+);
+
+mysql> CREATE TABLE Department(
+    -> DeptNo INT PRIMARY KEY UNIQUE,
+    -> Dname VARCHAR(12) NOT NULL UNIQUE,
+    -> Loc VARCHAR(20) NOT NULL UNIQUE
+    -> );
+Query OK, 0 rows affected (0.60 sec)
+
+mysql> DESC Department;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DeptNo | int         | NO   | PRI | NULL    |       |
+| Dname  | varchar(12) | NO   | UNI | NULL    |       |
+| Loc    | varchar(20) | NO   | UNI | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)

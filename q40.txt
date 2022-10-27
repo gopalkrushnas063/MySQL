@@ -1,0 +1,9 @@
+mysql> SELECT Ename , POSITION('A' IN Ename) FROM Employee;
++-------+------------------------+
+| Ename | POSITION('A' IN Ename) |
++-------+------------------------+
+| MASON |                      2 |
+| JOHN  |                      0 |
+| BLAKE |                      3 |
++-------+------------------------+
+3 rows in set (0.02 sec)
